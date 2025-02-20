@@ -1,4 +1,4 @@
-import { SimplifiedLayout, buildSimplifiedLayout } from "~/transformers/layout";
+import { SimplifiedLayout, buildSimplifiedLayout } from "../transformers/layout";
 import type {
   GetFileNodesResponse,
   Node as FigmaDocumentNode,
@@ -6,7 +6,7 @@ import type {
   Vector,
   RGBA,
 } from "@figma/rest-api-spec";
-import { hasValue, isRectangle, isStrokeWeights, isTruthy } from "~/utils/identity";
+import { hasValue, isRectangle, isStrokeWeights, isTruthy } from "../utils/identity";
 
 /**
  * TDOO ITEMS

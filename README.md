@@ -26,7 +26,13 @@ Reducing the amount of context provided to the model helps make the AI more accu
 
 1. Clone the repository
 2. Install dependencies with `pnpm install`
-3. Copy `.env.example` to `.env` and fill in your [Figma API access token](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens). Only read access is required.
+3. Update the `src/config.ts` file with your [Figma API access token](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens). Only read access is required:
+
+```typescript
+export const NODE_ENV = "cli";
+export const FIGMA_API_KEY = "your_figma_api_key_here";
+export const PORT = 3333;
+```
 
 ## Connecting to Cursor
 

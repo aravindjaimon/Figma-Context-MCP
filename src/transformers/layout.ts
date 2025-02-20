@@ -1,4 +1,4 @@
-import { isFrame, isLayout, isRectangle } from "~/utils/identity";
+import { isFrame, isLayout, isRectangle } from "../utils/identity";
 import type {
   Node as FigmaDocumentNode,
   HasFramePropertiesTrait,

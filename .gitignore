@@ -9,6 +9,7 @@ dist
 .env
 .env.local
 .env.*.local
+config.ts
 
 # IDE
 .vscode/*
@@ -21,7 +22,8 @@ dist
 *.sln
 *.sw?
 
-# Logs
+# Generated data and logs
+data/
 logs
 *.log
 npm-debug.log*
@@ -34,4 +36,4 @@ coverage
 
 # OS
 .DS_Store
-Thumbs.db 
+Thumbs.db

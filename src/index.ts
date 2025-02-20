@@ -1,25 +1,14 @@
-import { config } from "dotenv";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { FIGMA_API_KEY, NODE_ENV, PORT } from "./config";
 import { FigmaMcpServer } from "./server";
 
-// Load environment variables from .env file
-config();
-
 export async function startServer(): Promise<void> {
-  const FIGMA_API_KEY = process.env.FIGMA_API_KEY;
-  const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3000;
-
-  if (!FIGMA_API_KEY) {
-    console.error("FIGMA_API_KEY environment variable is required");
-    process.exit(1);
-  }
-
   // At this point we know FIGMA_API_KEY is defined
   const apiKey: string = FIGMA_API_KEY;
   const server = new FigmaMcpServer(apiKey);
 
   // Check if we're running in stdio mode (e.g., via CLI)
-  const isStdioMode = process.env.NODE_ENV === "cli" || process.argv.includes("--stdio");
+  const isStdioMode = NODE_ENV || process.argv.includes("--stdio");
 
   if (isStdioMode) {
     console.log("Initializing Figma MCP Server in stdio mode...");
