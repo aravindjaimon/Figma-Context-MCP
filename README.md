@@ -55,7 +55,6 @@ Make sure to:
 
 1. Replace `path/to/Figma-Context-MCP` with the actual path to your cloned repository
 2. Build the project with `pnpm build` before connecting
-3. Keep the server running with `pnpm dev` while using Cline
 
 Once configured, you can use Figma design data in your Cline conversations by referencing Figma file links.
 
