@@ -34,6 +34,31 @@ export const FIGMA_API_KEY = "your_figma_api_key_here";
 export const PORT = 3333;
 ```
 
+## Connecting to Cline
+
+To use this MCP server with Cline, add the following configuration to your Cline MCP settings file:
+
+```json
+{
+  "mcpServers": {
+    "Figma": {
+      "command": "node",
+      "args": ["/path/to/Figma-Context-MCP/dist/cli.js"],
+      "disabled": false,
+      "autoApprove": ["get-file", "get-node"]
+    }
+  }
+}
+```
+
+Make sure to:
+
+1. Replace `path/to/Figma-Context-MCP` with the actual path to your cloned repository
+2. Build the project with `pnpm build` before connecting
+3. Keep the server running with `pnpm dev` while using Cline
+
+Once configured, you can use Figma design data in your Cline conversations by referencing Figma file links.
+
 ## Connecting to Cursor
 
 ### Start the development server
